@@ -1,0 +1,20 @@
+/* Center the navbar */
+.navbar {
+    justify-content: center;
+  }
+  
+  /* Navbar item hover effect */
+  .navbar-nav .nav-link {
+    padding: 8px 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #f8f9fa;
+  }
+
+#mini-profile {
+    width: 150px;
+    height: 150px;
+}
+  
