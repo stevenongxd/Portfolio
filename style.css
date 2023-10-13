@@ -1,20 +1,101 @@
-/* Center the navbar */
 .navbar {
     justify-content: center;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100; 
   }
   
   /* Navbar item hover effect */
   .navbar-nav .nav-link {
     padding: 8px 20px;
-    transition: background-color 0.3s;
+    transition: color 0.5s;
   }
   
-  .navbar-nav .nav-link:hover {
-    background-color: #f8f9fa;
+  .nav-link {
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    font-weight: 300;
   }
 
-#mini-profile {
-    width: 150px;
-    height: 150px;
+  .navbar-nav .nav-link:hover {
+    color: rgb(202, 202, 202);
+    border-radius: 50%;
+  }
+
+#mini-profile-container {
+    width: 222px;
+    height: 222px;
+    border-radius: 50%;
 }
-  
+
+/* Header CSS */
+
+header {
+  background-image: url(assets/home-bg.jpg);
+  background-color: rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#home {
+  color: white;
+  min-height: 100vh;
+}
+
+#mini-profile {
+  width: 100%;
+  height: auto;
+}
+
+/* Name Typing Animation */
+.name-container h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid transparent;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  animation: typing 5s steps(40) forwards, blink-caret 0.75s step-end forwards;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+/* Arrow Down Animation */
+.keyboard-animation {
+  display: inline-block;
+  position: relative;
+  animation: moveUpAndDown 2s infinite;
+  font-size: 50px;
+  color: white;
+}
+
+.keyboard-animation i {
+  color: white;
+}
+
+@keyframes moveUpAndDown {
+  0%, 100% {
+      top: 0;
+  }
+  50% {
+      top: 10px;
+  }
+}
