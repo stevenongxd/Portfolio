@@ -6,55 +6,66 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="/bootstrap-5.3.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#home">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#about">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#resume">RESUME</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#portfolio">PORTFOLIO</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#contact">CONTACT</a>
-                    </li>
-                  </ul>
-              </div>
-            </div>
-        </nav>
-    </header>
-    
-      <section id="home" class="section mt-5">
-            <div class="container text-center">
-                <!-- Mini Profile -->
-                <div class="row justify-content-center">
-                  <div class="col-lg-4">
-                    <div class="mx-auto rounded-circle overflow-hidden mb-3" style="width: 150px; height: 150px;">
-                      <img src="assets/mini-profile.jpg" alt="Your Name" class="img-fluid">
-                    </div>
-                    <h2>Steven Ong</h2>
-                    <p>Student - Web Developer - Front End Enthusiast</p>
-                  </div>
+      <header>
+          <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+  
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+  
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#home">HOME</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#resume">RESUME</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                      </li>
+                    </ul>
                 </div>
               </div>
-      </section>
-    
+          </nav>
+          
+          <!-- Home/introduction Section -->
+            <section id="home" class="section mt-5 pt-5">
+                  <div class="container">
+                      <!-- Mini Profile -->
+                      <div class="row justify-content-center">
+                        <div class="col-lg-10 text-center">
+                          <div class="mx-auto rounded-circle overflow-hidden mb-4" id="mini-profile-container">
+                            <img src="assets/mini-profile.jpg" alt="Your Name" class="img-fluid" id="mini-profile">
+                          </div>
+                          <div class="name-container mt-5">
+                            <h1>STEVEN ONG</h1>
+                          </div>
+                          <div class="title-container mt-5">
+                            <h5>Information Systems Student & Web Developer Enthusiast</h5>
+                            <div class="keyboard-animation mt-5">
+                              <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="fas fa-chevron-down"></i></a>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </section>
+      </header>
+      
+
       <section id="about" class="section">
         <h1>About Section</h1>
         <!-- Your about content goes here -->
