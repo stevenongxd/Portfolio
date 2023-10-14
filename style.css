@@ -2,62 +2,72 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
-
+  
+a {
+  text-decoration: none;
+  color: inherit;
+}
+  
 h1, h2, h3, h4, h5, h6, a {
   font-family: "Raleway", sans-serif;
 }
-
+  
+/* Smooth transition */
+.section {
+  transition: opacity 0.5s ease-in-out;
+}
+  
 /* Navbar */
 .navbar {
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100; 
-  }
-
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+  
 /* Navbar item hover effect */
 .navbar-nav .nav-link {
-    padding: 8px 20px;
-    transition: color 0.5s;
-  }
+  padding: 8px 20px;
+  transition: color 0.5s;
+}
   
 .nav-link {
-    color: rgb(255, 255, 255);
-    font-size: 1.2em;
-    font-weight: 300;
-  }
-
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+  font-weight: 300;
+}
+  
 .navbar-nav .nav-link:hover {
-    color: rgb(202, 202, 202);
-    border-radius: 50%;
-  }
+  color: rgb(202, 202, 202);
+}
   
 /* Header CSS */
 header {
-    background-image: url(assets/home-bg.jpg);
-    background-color: rgba(0, 0, 0, 0.2);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url(assets/home-bg.jpg);
+  background-color: rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
+  
 #home {
-    color: white;
-    min-height: 100vh;
-  }
+  color: white;
+  min-height: 100vh;
+}
   
 #mini-profile-container {
-    width: 222px;
-    height: 222px;
-    border-radius: 50%;
-  }
-
+  width: 222px;
+  height: 222px;
+  border-radius: 50%;
+  margin-top: 80px;
+}
+  
 #mini-profile {
   width: 100%;
   height: auto;
 }
-
+  
 /* Name Typing Animation */
 .name-container h1 {
   white-space: nowrap;
@@ -68,25 +78,25 @@ header {
   text-align: center;
   animation: typing 5s steps(40) forwards, blink-caret 0.75s step-end;
 }
-
+  
 @keyframes typing {
   0% {
-    width: 0;
+  width: 0;
   }
   100% {
-    width: 100%;
+  width: 100%;
   }
 }
-
+  
 @keyframes blink-caret {
   from, to {
-    border-color: transparent;
+  border-color: transparent;
   }
   50% {
-    border-color: white;
+  border-color: white;
   }
 }
-
+  
 /* Arrow Down Animation */
 .keyboard-animation {
   display: inline-block;
@@ -95,74 +105,75 @@ header {
   font-size: 40px;
   color: white;
 }
-
+  
 .keyboard-animation i {
   color: white;
 }
-
+  
 @keyframes moveUpAndDown {
   0%, 100% {
-      top: 0;
+  top: 0;
   }
   50% {
-      top: 10px;
+  top: 10px;
   }
 }
-
+  
 /* CSS for Section Title */
 .section-title {
   text-align: center;
   margin-bottom: 20px;
 }
-
+  
 .section-title h2 {
   position: relative;
   display: inline;
   font-weight: bold;
+  color: #ffb727;
 }
-
+  
 .section-title h2::before,
 .section-title h2::after {
   content: "";
   position: absolute;
   height: 2px;
-  background-color: #555;
+  background-color: #ffb727;
   top: 50%;
   width: 45%;
 }
-
+  
 .section-title h2::before {
   right: 100%;
   margin-right: 10px;
 }
-
+  
 .section-title h2::after {
   left: 100%;
   margin-left: 10px;
 }
-
+  
 /* About */
 #about, #skills, #portfolio {
   background-color: #f1f1f1;
   padding: 30px 0;
 }
-
+  
 .row ul li a {
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
-
+  
 .skill {
   position: relative;
   margin-top: 15px;
 }
-
+  
 .progress-bar {
-  background-color: #0073b6;
-  height: 20px; 
+  background-color: #ffb727;
+  height: 20px;
 }
-
+  
 .skill .progress-bar::before {
   content: "";
   display: block;
@@ -173,25 +184,74 @@ header {
   width: 100%;
   z-index: -1;
 }
-
+  
 .skill span {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  margin: auto 10px; 
+  margin: auto 10px;
   font-size: 15px;
   font-weight: bold;
 }
-
+  
 .skill-name {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 5px;
 }
-
+  
+.animated-progress {
+  width: 0;
+  animation: fillProgress 1s ease-in-out forwards;
+}
+  
+@keyframes fillProgress {
+  from {
+  width: 0;
+  }
+  to {
+  width: var(--progress-value, 0);
+  }
+}
+  
+/* Resume */
 .resume-item h4 {
   margin-top: 30px;
 }
-
+  
 /* Portfolio */
+.portfolio-container {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+  
+/* Contact */
+#contact {
+  margin-top: 50px;
+}
+  
+.fab, .fas {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #444444;
+}
+  
+.fab:hover, .list-unstyled li a:hover {
+  color: #ffb727;
+  transition: color 0.3s;
+}
+  
+.list-unstyled li a {
+  font-size: large;
+  font-weight: 500;
+}
+  
+.email-link, .phone-link, .linkedin-link {
+  font-size: 1.2em;
+}
+  
+/* Footer */
+footer {
+  background-color: #ffb727;
+}
